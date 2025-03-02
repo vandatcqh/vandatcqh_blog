@@ -1,33 +1,33 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
+import Head from '../components/Head.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import "../styles/tailwind.css";
-
+import Header from "../components/Header.astro";
 import Section from "../components/Section.astro";
+
+import { USER_PROFESSIONAL_DESCRIPTION } from "../data/user-professional";
+import { USER_NAME } from '../data/user-personal';
 ---
 
 <!doctype html>
 <html lang="en" class="bg-primary-desaturated">
+	<head><Head pageTitle=`${ USER_NAME }'s Portfolio` pageDescription='This is the page they will see when they first visit your website.'  /></head>
 	<body>
-		<!-- <Header /> -->
 		<main class="min-h-svh bg-linear-to-b from-primary-desaturated to-primary">
-			<Section class='h-32' />
-			<Section class='flex flex-row'>
-				<h1 class="text-5xl">Kadir Lofca</h1>
-				<div class="flex flex-wrap w-min ml-auto">
-					<a href="">kadirlofca@outlook.com</a>
-					<a href="">LinkedIn</a>
-					<a href="">GitHub</a>
-					<a href="">Discord</a>
-					<a href="">YouTube</a>
-				</div>
+			<!-- HEADER -->
+			<Header />
+
+			<!-- HERO -->
+			<Section class="max-w-xl mx-auto py-32 text-center">
+				{ USER_PROFESSIONAL_DESCRIPTION }
 			</Section>
-			<Section> 
-				<div class="h-lvh"></div>
+
+			<!-- CONTENT -->
+			<Section>
+				<div class="bg-primary border rounded-lg border-accent"></div>
 			</Section>
+
+			<!-- FOOTER -->
+			<Footer />
 		</main>
-		<!-- <Footer /> -->
 	</body>
 </html>

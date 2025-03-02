@@ -1,0 +1,1 @@
+export const USER_PROFESSIONAL_DESCRIPTION: string = "User's professinal description.";
