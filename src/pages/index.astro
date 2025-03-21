@@ -8,7 +8,7 @@ import CosmeticText from "../components/CosmeticText.astro";
 import { siteTitle, SiteDescription } from "../data/site.json";
 import { userProfessionalDescription } from "../data/user-professional.json";
 import { userIntroduction, userName } from "../data/user-personal.json";
-import userPicture from "../../public/user-picture.jpeg";
+import userPicture from "../../public/user-picture.jpg";
 import { getCollection } from "astro:content";
 
 const allPosts = (await getCollection("posts")).filter((post) => post.data.published);
